@@ -1,9 +1,8 @@
-from cagojeiger/cuda:10.1-base 
+from cagojeiger/ubuntu:18.04 
 MAINTAINER cagojeiger@naver.com
 
 RUN apt-get update -y
-RUN apt-get install cuda -y
-RUN pip3 install tensorflow-gpu
+RUN pip3 install tensorflow
 
-RUN git clone https://github.com/kangheeyong/STUDY-machine-learning.git /home/STUDY-machine-learning
+RUN git clone https://github.com/kangheeyong/PROJECT-ML-ENV-setting.git /home/PRJECT-ENV-setting
 
