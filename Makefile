@@ -4,7 +4,7 @@ clean:
 	-find -name "*.pyc" -exec rm {} \;
 
 process_run: make_folder
-	supervisord -c /home/STUDY-machine-learning/supervisor/basic_process.conf
+	supervisord -c /home/PRJECT-ENV-setting/supervisor/basic_process.conf
 
 process_monitor:
 	supervisorctl -s http://localhost:23231
