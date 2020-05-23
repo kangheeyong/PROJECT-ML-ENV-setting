@@ -1,4 +1,4 @@
-from cagojeiger/ubuntu:18.04-tensorflow 
+from cagojeiger/ubuntu:18.04-tensorflow-gpu
 MAINTAINER cagojeiger@naver.com
 
 RUN apt-get update -y
