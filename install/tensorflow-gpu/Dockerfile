@@ -8,5 +8,5 @@ RUN apt-get install supervisor -y
 RUN pip3 install jupyter
 
 WORKDIR /home/PROJECT-ML-ENV-setting
-CMD ["/bin/zsh", "start.sh"]
+CMD make process_run && /bin/zsh
 
