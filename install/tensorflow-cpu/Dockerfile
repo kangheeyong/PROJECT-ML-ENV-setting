@@ -3,5 +3,5 @@ MAINTAINER cagojeiger@naver.com
 
 RUN apt-get update -y
 
-RUN git clone https://github.com/kangheeyong/PROJECT-ML-ENV-setting.git /home/PRJECT-ENV-setting
+RUN git clone https://github.com/kangheeyong/PROJECT-ML-ENV-setting.git /home/PRJECT-ML-ENV-setting
 
