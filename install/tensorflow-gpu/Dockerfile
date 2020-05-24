@@ -10,6 +10,6 @@ RUN pip3 install jupyter
 
 EXPOSE 8090
 WORKDIR /home/PROJECT-ML-ENV-setting
-CMD ["make", "run"]
+CMD ["make", "process_run"]
 
 
