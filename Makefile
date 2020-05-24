@@ -29,5 +29,6 @@ docker_container_remove:
 	-sudo docker rm $$(sudo docker ps -a -q -f name=jeiger)
 
 docker_image_remove:
+	-sudo docker rmi $$(docker images -q -f dangling=true)
 	-sudo docker rmi $$(sudo docker images -q -f reference=local/ubuntu)
 	
