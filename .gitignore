@@ -6,4 +6,7 @@
 *.log
 *.pid
 __pycache__
+logs
+*.log
+*.pid
 
