@@ -3,5 +3,7 @@
 *.so
 *.pyc
 *.pickle
+*.log
+*.pid
 __pycache__
 
