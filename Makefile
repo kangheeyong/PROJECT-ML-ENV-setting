@@ -7,7 +7,8 @@ clean:
 docker_run:
 	- mkdir ~/jeiger
 	docker build -t local/ubuntu:18.04-tensorflow-cpu .
-	docker run -d -ti --net=host --name jeiger\
+	docker run -d -ti --name jeiger\
+		   -p 8000-9000:8000-9000\
 		   -v ~/jeiger:/root/jeiger\
 		   local/ubuntu:18.04-tensorflow-cpu
 
