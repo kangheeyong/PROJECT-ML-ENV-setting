@@ -3,3 +3,23 @@ clean:
 	-find -name "*.swp" -exec rm {} \;
 	-find -name "*.pyc" -exec rm {} \;
 
+
+docker_run:
+	- mkdir ~/jeiger
+	docker build -t local/ubuntu:18.04-tensorflow-cpu .
+	docker run -d -ti --net=host --name jeiger\
+		   -v ~/jeiger:/root/jeiger\
+		   local/ubuntu:18.04-tensorflow-cpu
+
+docker_exec:
+	docker exec -ti jeiger /bin/zsh --login
+
+docker_container_remove:
+	-sudo docker stop $$(sudo docker ps -a -q -f name=jeiger)
+	-sudo docker rm $$(sudo docker ps -a -q -f name=jeiger)
+
+docker_image_remove:
+	-sudo docker rmi $$(docker images -q -f dangling=true)
+	-sudo docker rmi $$(sudo docker images -q -f reference=local/ubuntu)
+
+
