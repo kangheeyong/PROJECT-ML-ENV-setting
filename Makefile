@@ -15,11 +15,11 @@ docker_exec:
 	docker exec -ti jeiger /bin/zsh --login
 
 docker_container_remove:
-	-sudo docker stop $$(sudo docker ps -a -q -f name=jeiger)
-	-sudo docker rm $$(sudo docker ps -a -q -f name=jeiger)
+	-docker stop $$(docker ps -a -q -f name=jeiger)
+	-docker rm $$(docker ps -a -q -f name=jeiger)
 
 docker_image_remove:
-	-sudo docker rmi $$(docker images -q -f dangling=true)
-	-sudo docker rmi $$(sudo docker images -q -f reference=local/ubuntu)
+	-docker rmi $$(docker images -q -f dangling=true)
+	-docker rmi $$(docker images -q -f reference=local/ubuntu)
 
 

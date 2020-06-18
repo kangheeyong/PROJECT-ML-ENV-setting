@@ -4,6 +4,6 @@ MAINTAINER cagojeiger@naver.com
 RUN apt-get update -y
 RUN mkdir /root/jeiger
 
-
+WORKDIR /root/jeiger
 
 
