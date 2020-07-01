@@ -13,7 +13,7 @@ docker_run:
 		   local/ubuntu:18.04-tensorflow-cpu
 
 jupyter_run:
-	jupyter notebook --no-browser --NotebookApp.token= --port 18000 --allow-root
+	jupyter notebook --no-browser --notebook-dir='~/jeiger' --NotebookApp.token= --ip=0.0.0.0 --port 18000 --allow-root
 
 docker_exec:
 	docker exec -ti jeiger /bin/zsh --login
