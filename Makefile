@@ -8,7 +8,6 @@ docker_run:
 	- mkdir ~/jeiger
 	docker build -t local/ubuntu:18.04-tensorflow-cpu .
 	docker run -d -ti --name jeiger\
-		   --memory="4g"\
 		   -p 18000-19000:18000-19000\
 		   -v ~/jeiger:/root/jeiger\
 		   local/ubuntu:18.04-tensorflow-cpu
