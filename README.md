@@ -31,4 +31,5 @@ make docker_exec
   
   - vim 설정은 config file 참고
   - config file path : /root/.vimrc
+  - '\\'+'g' -> 함수 define
 
